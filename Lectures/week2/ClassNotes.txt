@@ -1,0 +1,31 @@
+Python Refresher
+
+
+input-processing-output
+
+
+
+3 main elements of a computer
+-I/O devices
+-CPU
+-Main Memory(RAM)
+
+
+3 types
+-Fetch(the code)
+-Decode
+-Execute
+
+
+#is a symbol for commenting in python
+
+
+print() is to show output
+
+there are 4 datatypes
+strings  "  ",'  '
+integers 1 2 3
+float 3.14
+boolean true false
+
+

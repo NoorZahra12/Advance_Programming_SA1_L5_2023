@@ -1,0 +1,9 @@
+Types of widgets:
+
+Button
+Label
+#Checkbutton
+Entry
+Radiobutton
+OptionMenu
+ScrollBar

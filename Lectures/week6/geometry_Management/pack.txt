@@ -1,0 +1,6 @@
+side: LEFT RIGHT TOP BOTTOM
+fill: X Y BOTH(to expand in horizontal,vertical or both)
+expand: 1/0 or Yes/No(corresponding to values respectively)
+anchor: N, S, E, W
+internal padding:
+padding:
