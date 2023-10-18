@@ -1,7 +1,9 @@
 # Write a program that calculates the number of seconds in a day.
 # Hint: Ask user to enter number of days, Convert days into hours, hours to minutes, minutes to seconds
 
-#asing user the number of days
+
+
+#asking user the number of days
 days=int(input("Enter number of days you want to convert: "))
 
 hours=24*days#there are 24 hours in one day so we multiply the number of days with 24

@@ -5,8 +5,14 @@
 
 #importing random library
 import random
+
+#counting the amount of times the loop is repeated
+dice_rounds=0
+
 #while loop will keep looping itself while it is True until it turns false or i break the loop with a conditon
 while True:
+    #incrementing the number of times the loops is repeated by 1 every time the loop is used
+    dice_rounds+=1
     #printing a random integer ranging from 1 until 6 inside a variable called dice which will keep 
     #regenerating a new number every time the loop is being looped again a new dice number will appear
     dice=random.randint(1,6)
@@ -19,3 +25,7 @@ while True:
     #otherwise with break it will end the loop if the user inputs any other letter than y
     else:
         break
+
+#after the loop ends it will display the number of times the loop was used
+# it will show the total result after the loop is terminated
+print("The number of times the dice was rolled: ",dice_rounds)

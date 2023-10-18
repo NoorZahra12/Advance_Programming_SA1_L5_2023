@@ -17,7 +17,7 @@ c=int(input("Thrid angle: "))
 
 #checking if it is a triangle
 if (a + b > c) and (a + c > b) and (b + c > a):
-    print("\nit is a triangle:")
+    print("\nIt is a triangle:")
     #if it is a triangle then checking what type of triangle it is with nested if statements
     #if all sides are equal
     if a==b==c:
