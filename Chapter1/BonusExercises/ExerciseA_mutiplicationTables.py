@@ -26,6 +26,9 @@
 # 10 x 10 = 100
 
 
+
+
+
 #this is the table number
 table_num=1
 #and this will be the number which will increase in each line of a table

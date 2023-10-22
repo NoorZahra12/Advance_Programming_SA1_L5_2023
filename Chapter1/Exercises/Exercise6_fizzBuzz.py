@@ -6,7 +6,7 @@
 
 #using for loop and range from 1 to 101 to print numbers from 1 til 100
 for num in range(1,101):
-    #if a number is divisible by both 3 and 5
+    #if a number is divisible by both 3 and 5 then it will display fixxbuxx instead of number
     if num%3==0 and num%5==0:
         print("Fizzbuzz")
         

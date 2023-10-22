@@ -8,10 +8,11 @@
 
 
 year = (2017,2003,2011,2005,1987,2009,2020,2018,2009)
-print(year,"\n3rd index:",year[2],"\t-3rd index: ",year[-3])
+print("3rd index:",year[2],"\n-3rd index: ",year[-3])
 #reversing tuple
-reverse= tuple(reversed(year))
-print("\nOriginal year list:",year,"\nReversed year list: ",reverse)
+reverse_year= year[::-1]
+print("\nOriginal year list:",year,
+      "\nReversed year list: ",reverse_year)
 
 #counting how many times 2009 appeared in the tuple
 counting_2009=year.count(2009)

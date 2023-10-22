@@ -8,6 +8,7 @@
 #classify the type of triangle as either: Equilateral, Isosceles or Scalene  
 #([see here](https://www.mathsisfun.com/triangle.html))
 
+
 #asking user to type 3 numbers
 print("Enter 3 numbers for the triangle")
 #taking 3 user inputs

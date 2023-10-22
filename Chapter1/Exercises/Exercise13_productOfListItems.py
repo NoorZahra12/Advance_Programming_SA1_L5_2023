@@ -15,7 +15,18 @@ def multiply_list(listx):
     #returning the prod variable to the user
     return prod
 
-#making my own list
-my_list=[6,2,9,4]
+#taking user input
+user_list=[]
+
+while True:
+    choice=input("Enter number or 'q' to quit: ")
+    if choice=="q":
+        break
+    else:
+        user_number=int(choice)
+        user_list.append(user_number)
+
+
+
 #printing the answer by calling function
-print(multiply_list(my_list))
+print("List:",user_list,"\nProduct:", multiply_list(user_list))
