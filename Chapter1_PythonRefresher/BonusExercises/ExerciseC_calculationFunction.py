@@ -22,13 +22,21 @@
 ################################## making a function called add for sum #############################
 # user can will be asked 2 numbers and then user has to option to add as many numbers as user wants
 def add():
+    # storing the first number inside a variable called a
     a=float(input("Enter first number: "))
+    # storing the second number inside a variable called b
     b=float(input("Enter first number: "))
+    # adding the two numbers using '+' and storing the new number inside a variable called ans
     ans= a+b
+    #printing ans variable's value
     print(ans)
+    #letting the user add as many numbers as they want
     while True:
+        #asking the user a question and taking user input to store that inside this variable
         user_choice=input("\nDo you want to add the answer with more number? (y/n): ")
+        #based on what the user wrote the following insructions will be executed
         if user_choice == "y":
+            #if user pressed y
             number=float(input("Enter number: "))
             ans+=number
             print("Here is your answer: ",ans)
