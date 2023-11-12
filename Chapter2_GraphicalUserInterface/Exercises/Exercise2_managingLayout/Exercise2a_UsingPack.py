@@ -19,17 +19,19 @@
 
 import tkinter as tk
 root=tk.Tk()
-root.geometry("200x100")
 root.title("11/nov/2023")
+#  Borders: flat, groove, raised, ridge, solid, or sunken
+#padx meanig to add padding in the x axis(horizontal axis)
+labelA = tk.Label(root,text="A", relief="groove", background="red", padx=30 , bd=5)
+labelB = tk.Label(root,text="B", relief="raised", background="yellow", padx=30, bd=3)
+labelC = tk.Label(root,text="C", background="blue", padx=30 )
+labelD = tk.Label(root,text="D", background="white", padx=30 )
 
-label1 = tk.Label(root,text="A", background="red", bd=5)
-label2 = tk.Label(root,text="B", background="blue")
-label3 = tk.Label(root,text="C", background="white")
-label4 = tk.Label(root,text="D", background="yellow")
+#displaying the labels inside the window using pack
+labelA.pack(side="top", fill=tk.X, expand=True)
+labelB.pack(side="bottom")
+labelC.pack(side="left",fill=tk.Y, expand=True)
+labelD.pack(side="right")
 
-label1.pack(side="top", fill=tk.X, expand=True)
-label2.pack(side="bottom")
-label3.pack(side="left",fill=tk.Y, expand=True)
-label4.pack(side="right")
-
+#displaying the window with mainloop
 root.mainloop()
