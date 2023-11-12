@@ -19,5 +19,7 @@ for num in range(1,101):
         print("Buzz")
 
     #this is the default statement if all the statements above are false
+    #basically if it is not a divisble number by 3 5 or both
+    #it will simply print the number
     else:
         print(num)

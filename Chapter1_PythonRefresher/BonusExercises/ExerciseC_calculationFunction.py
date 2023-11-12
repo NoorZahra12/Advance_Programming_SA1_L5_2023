@@ -17,7 +17,10 @@
 ########################################################################################
 #########################  making 5 self defined functions  ############################
 ########################################################################################
-
+# Note: 1. In addition and multiplication function the user can type as may input as user wants
+# 2. In the subtraction function user will type one number and then whatever number user types after 
+# that, the function will subtract those numbers with the first number
+# 3. In multiplication and division function only 2 inuts will be taken from the user
 
 ################################## making a function called add for sum #############################
 # user can will be asked 2 numbers and then user has to option to add as many numbers as user wants
@@ -26,7 +29,7 @@ def add():
     a=float(input("Enter first number: "))
     # storing the second number inside a variable called b
     b=float(input("Enter first number: "))
-    # adding the two numbers using '+' and storing the new number inside a variable called ans
+    # adding the two numbers and storing the new number inside a variable called ans
     ans= a+b
     #printing ans variable's value
     print(ans)
@@ -34,13 +37,19 @@ def add():
     while True:
         #asking the user a question and taking user input to store that inside this variable
         user_choice=input("\nDo you want to add the answer with more number? (y/n): ")
-        #based on what the user wrote the following insructions will be executed
+        #based on what the user wrote
+        # asking user if they want to type any additional input. then the following insructions will be executed
+        # if user types "y" to type another number
         if user_choice == "y":
-            #if user pressed y
+            # asking user input
             number=float(input("Enter number: "))
+            # doing the calculation and storing it inside a variable
             ans+=number
             print("Here is your answer: ",ans)
+  
+        # If user wants to stop calculation and break the loop
         elif user_choice == 'n':
+            # showing the answer and then repeating the while loop in case user wants to type another input
             print("Here is your answer: ",ans)
             break
         #if user types anything other than y or n it displays this message
@@ -51,16 +60,25 @@ def add():
 ################################ making a subtract function for subtraction ################################
 #user will be asked 2 numbers and the user can subtract the numbber(minuend) with as many number as user wants
 def sub():
+    # first number
     minuend = float(input("Enter the minuend: "))
+    # second number which will be subtracted from the first number
     subtrahend = float(input("Enter the subtrahend: "))
     ans= minuend-subtrahend
     print("Here is your answer: ",ans)
+    # while loop for addiion numbers
     while True:
+        # asking user if they want to tpe any additional inputs
         user_choice=input("\nDo you want to subtract the answer with more subtrahends? (y/n): ")
+        # if user types "y" to type another number
         if user_choice == "y":
+            # asking user input
             number=float(input("Enter number: "))
+            # doing the calculation and storing it inside a variable
             ans-=number
+            # showing the answer and then repeating the while loop in case user wants to type another input
             print("Here is your answer: ",ans)
+        # If user wants to stop calculation and break the loop
         elif user_choice == "n":
             print("Here is your answer: ",ans)
             break
@@ -71,16 +89,23 @@ def sub():
 ######################## making a function for multiplication ######################################
 # user can will be asked 2 numbers and then user has to option to multiply it with as many numbers as user wants
 def mul():
-    table=float(input("Enter table number: "))
-    count=float(input("Enter multiplying number: "))
-    prod=table*count
+    a=float(input("Enter first number: "))
+    b=float(input("Enter second number: "))
+    prod=a*b
     print("Here is your answer: ",prod)
+    # while loop for addiion numbers
     while True:
-        user_choice=input("\nDo you want to subtract the answer with more subtrahends? (y/n): ")
+        # asking user if they want to tpe any additional inputs
+        user_choice=input("\nDo you want to multiply the answer with more numbers? (y/n): ")
+        # if user types "y" to type another number
         if user_choice == "y":
-            number=float(input("Enter number: "))
-            prod*=number
+            # asking user input
+            c=float(input("Enter number: "))
+            # doing the calculation and storing it inside a variable
+            prod*=c
+            # showing the answer and then repeating the while loop in case user wants to type another input
             print("Here is your answer: ",prod)
+        # If user wants to stop calculation and break the loop
         elif user_choice == "n":
             print("Here is your answer: ",prod)
             break
@@ -94,7 +119,9 @@ def div():
     #using fraction terms so user knows which number is being asked to type
     x=float(input("Enter Numerator: "))
     y=float(input("Enter Dominator: "))
+    # calculating the answer inside a variable
     ans = x/y
+    # returing the variable with the answer stored inside it
     return ans
 
 ################################ making a function for multiplication ######################################
@@ -103,7 +130,9 @@ def mod():
     #using division terms to display the remainder
     x=float(input("Enter Dividend: "))
     y=float(input("Enter Divisor: "))
+    # calculating the answer inside a variable
     ans = x%y
+    # returing the variable with the answer stored inside it
     return ans
 
 ##########################################################################

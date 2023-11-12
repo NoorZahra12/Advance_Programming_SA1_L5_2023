@@ -9,35 +9,47 @@
 import math
 
 #making 3 functions to calculate the area
-def area_square(side):
+def area_square():
+    #asking necessary input from user
+    side=float(input("Enter length of side: "))
+    #formula for calculating the area and storing the answer inside a variable
     area=side*side
+    # returnimg the answer
     return area
-
-def area_circle(radius):
+def area_circle():
+    #asking necessary input from user
+    radius=float(input("Enter radius: "))
+    #formula for calculating the area and storing the answer inside a variable
     area=math.pi*radius**2
+    # returnimg the answer
     return area
-
-def area_triangle(b,h):
+def area_triangle():
+    #asking necessary input from user
+    b=float(input("Enter breadth: "))
+    h=float(input("Enter height: "))
+    #formula for calculating the area and storing the answer inside a variable
     area=(b*h)/2
+    # returnimg the answer
     return area
 
+# this is where the code starts for the user
 # asking user for the shape
 shape=input("1.Square\n2.Circle\n3.Triangle\nSelect a shape you want to find it's area: ")
 
-#using if else statements to print the answers
-if shape=="square" or shape=="Square":
-    user_side=float(input("Enter length of side: "))
-    print("The area of square is: ",area_square(user_side))
-
-elif shape=="circle" or shape=="Circle":
-    user_radius=float(input("Enter radius: "))
-    print("The area of circle is: ",area_circle(user_radius))
-
-elif shape=="triangle" or shape=="Triangle":
-    user_b=float(input("Enter breadth: "))
-    user_h=float(input("Enter height: "))
-    print("The area of triangle is: ",area_triangle(user_b,user_h))
-
-#if user entered the wrong spelling this output is shown
-else:
-    print("Your input was invalid")
+while True:
+    #using if else statements to print the answers according to what the user chooses
+    #writing 1 2 and 3 inside "" as i am taking user input as a string
+    if shape=="1" or shape=="square" or shape=="Square":
+        print("The area of square is: ",area_square())
+        break
+    elif shape=="2" or shape=="circle" or shape=="Circle":
+        print("The area of circle is: ",area_circle())
+        break
+    elif shape=="3" or shape=="triangle" or shape=="Triangle":
+        print("The area of triangle is: ",area_triangle())
+        break
+    #if user entered the wrong spelling this output is shown
+    else:
+        print("Your input was invalid")
+        # the loop will keep giving the user another chance to type a valid input in case user types an invalid answer 
+        # until user types correct

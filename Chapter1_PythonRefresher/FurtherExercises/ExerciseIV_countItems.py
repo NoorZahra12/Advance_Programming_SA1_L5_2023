@@ -3,7 +3,6 @@
 # (Hint: For each item in the list consider it as a key, and the number of times these items appear will be its associated value)
 
 
-
 staff = ["Arshiya", "Usman", "Iftikhar", "Usman", "Rafia", "Mary", "Anmol", "Zainab", "Iftikhar", "Arshiya", "Rafia", "Jake"]
 
 # making an empty dictionary with default values of 0, the "item" is the name of the elements in staff
