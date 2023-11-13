@@ -1,9 +1,6 @@
 # Exercise 4: Registration page ☑️
 # Using widgets create a GUI as shown in below image
 
-# Exercise 4: Registration page ☑️
-# Using widgets create a GUI as shown in below image
-
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
@@ -52,7 +49,7 @@ logolabel.pack(side="top")
 
 #################### Registration Page #########################
 
-container = tk.Frame(root)
+container = tk.Frame(root, bg="#F5F5F6")
 container.pack()
 button_container = tk.Frame(container)
 
@@ -133,6 +130,8 @@ checkbox_tagalog.grid(row=11, column=2)
 checkbox_urdu_hindi = tk.Checkbutton(container, text="Hindi/Urdu", variable=checkbox_var_2)
 checkbox_urdu_hindi.grid(row=12, column=1)
 
+
+
 rateEngCommSkillsLabel = tk.Label(container, text="Rate Your English Communication Skills: ")
 rateEngCommSkillsLabel.grid(row=13, columnspan=5)
 
@@ -143,13 +142,12 @@ rateEngCommSkillsScale = tk.Scale(container, from_=0, to=10, orient='horizontal'
 ttk.Style().configure("TScale", troughcolor="lightblue")
 ttk.Scale(container, from_=0, to=10, orient='horizontal', variable=slider, style="TScale").grid(row=14, columnspan=5)
 
-submit_button = tk.Button(container, text="Submit", command=submit, bg="#22263D", fg="white", padx=20, pady=5)
-submit_button.grid(row=15, column=0, columnspan=2, padx=(5, 10), pady=(5, 10))
+submit_button = tk.Button(container, text="Submit", command=submit, bg="#22263D", fg="white")
+submit_button.grid(row=15, column=0, columnspan=2)
 
-clear_button = tk.Button(container, text="Clear", command=clear, bg="#22263D", fg="white", padx=20, pady=5)
-clear_button.grid(row=15, column=1, columnspan=2, padx=(10, 10), pady=(10, 10))
+clear_button = tk.Button(container, text="Clear", command=clear, bg="#22263D", fg="white")
+clear_button.grid(row=15, column=1, columnspan=2)
 
 root.geometry(f"{img.width}x600")
 
-# displaying the window
 root.mainloop()
