@@ -10,11 +10,19 @@ root.geometry("300x200")
 
 def checker():
     # if user types everything correctly
-    if username.get() == "user" and user_password.get() == "password":
-        submitbtn.config(text="Submitted")
-        invalidlabel.pack_forget() #hiding the invalid label if user succesfully submits
+    name = username.get()
+    code = user_password.get()
     
     # if user types the wrong input
+    if name.isalpha() and code.isdigit():
+        submitbtn.config(text="Submitted")
+        #hiding the invalid label if user succesfully submits
+        invalidlabel.pack_forget()
+    elif name == "" or code == "":
+        submitbtn.config(text="Submit")
+        invalidlabel.config(text="Incomplete")
+        invalidlabel.pack()
+
     else:
         submitbtn.config(text="Submit")
         invalidlabel.pack()

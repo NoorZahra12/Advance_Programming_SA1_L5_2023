@@ -13,7 +13,7 @@ root.title("13/nov/2023 Calculator")
 # then 5 options
 # if user types evething correctly it will display the answer otherwise it will say that input is invalid
 
-def calculate(operation):
+def calculate(op_selection):
     num1_val = num1Entry.get()
     num2_val = num2Entry.get()
 
@@ -22,21 +22,21 @@ def calculate(operation):
         # converting string into float
         num1 = float(num1_val)
         num2 = float(num2_val)
-        # performing the selected operation
-        if operation == "+":
+        # performing the selected op_selection
+        if op_selection == "+":
             result.set(num1 + num2)
-        elif operation == "-":
+        elif op_selection == "-":
             result.set(num1 - num2)
-        elif operation == "x":
+        elif op_selection == "x":
             result.set(num1 * num2)
-        if operation == "/":
+        if op_selection == "/":
             # error handling in case user types 0 in division and remainder
             if num2 != 0:
                 result.set(num1 / num2)
             # the message will be displayed instead of result in case user types 0
             else:
                 result.set("Cannot divide by zero")
-        elif operation == "Remainder":
+        elif op_selection == "Remainder":
             if num2 != 0:
                 result.set(num1 % num2)
             # error handling
@@ -47,14 +47,13 @@ def calculate(operation):
         result.set("Invalid input")
 
 
-# First Number
 num1Label = tk.Label(root, text="First Number")
 num1Label.grid(row=0, column=1, columnspan=3, padx=10, pady=10)
 
 num1Entry = tk.Entry(root, width=12)
 num1Entry.grid(row=0, column=4, columnspan=3, padx=10, pady=10)
 
-# Second Number
+
 num2Label = tk.Label(root, text="Second Number")
 num2Label.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
 
@@ -65,7 +64,9 @@ num2Entry.grid(row=1, column=4, columnspan=3, padx=10, pady=10)
 buttons = ["+", "-", "x", "/", "Remainder"]
 # this will display 5 buttons using for loop and it will do the necessary calculation according to which ever button user clicks
 for i, operation in enumerate(buttons):
-    tk.Button(root, text=operation, command=lambda op=operation: calculate(op)).grid(row=2, column=i, padx=5, pady=5)
+    tk.Button(root, text=operation, command=lambda selectop=operation: calculate(selectop)).grid(row=3, column=i, padx=5, pady=5)
+
+
 
 # this will help link with the widget and modify it based on user input
 result = tk.StringVar()
