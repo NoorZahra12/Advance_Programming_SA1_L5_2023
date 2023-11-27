@@ -2,12 +2,10 @@
 # For example if enters a number 1234 the result is 1+2+3+4 = 10
 
 
-
 number=input("Enter many digits of numbers to add them: ")#taking input as string
 
 #this is the total sum variable
 sum_of_digits=0
-
 
 #this equation message is for displaying all the different numbers in the "number" string 
 # with a + sign between them
@@ -31,7 +29,7 @@ for digit_of_string in number:
     number_string +=  digit_of_string + " + "
 
 #removing the last plus sign in the end
-number_string=number_string[:-1]
+number_string =number_string[:-2]
 
 # printing the answer
 print("Result is:",number_string,"=",sum_of_digits)

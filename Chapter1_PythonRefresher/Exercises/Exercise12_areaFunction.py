@@ -39,17 +39,18 @@ shape=input("1.Square\n2.Circle\n3.Triangle\nSelect a shape you want to find it'
 while True:
     #using if else statements to print the answers according to what the user chooses
     #writing 1 2 and 3 inside "" as i am taking user input as a string
-    if shape=="1" or shape=="square" or shape=="Square":
+    if shape=="1" or shape.lower()=="square":
         print("The area of square is: ",area_square())
         break
-    elif shape=="2" or shape=="circle" or shape=="Circle":
+    elif shape=="2" or shape.lower()=="circle":
         print("The area of circle is: ",area_circle())
         break
-    elif shape=="3" or shape=="triangle" or shape=="Triangle":
+    elif shape=="3" or shape.lower()=="triangle":
         print("The area of triangle is: ",area_triangle())
         break
     #if user entered the wrong spelling this output is shown
     else:
         print("Your input was invalid")
+        shape=input("\n1.Square\n2.Circle\n3.Triangle\nSelect a shape you want to find it's area: ")
         # the loop will keep giving the user another chance to type a valid input in case user types an invalid answer 
         # until user types correct

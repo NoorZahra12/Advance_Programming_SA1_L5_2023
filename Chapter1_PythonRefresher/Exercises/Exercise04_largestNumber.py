@@ -11,7 +11,7 @@ num3=int(input("Third number: "))
 
 #checking if all 3 numbers are equal
 if num1==num2==num3:
-    print("All three numbers ", num1, num2, num3, "are equal")
+    print("All three numbers are equal")
 
 #checking if there are 2 numbers which are equal and largest
 elif num1==num2>num3:

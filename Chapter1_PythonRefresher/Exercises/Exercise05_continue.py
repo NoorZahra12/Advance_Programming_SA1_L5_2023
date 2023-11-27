@@ -18,7 +18,7 @@ while True:
     dice=random.randint(1,6)
     print(dice)
     #asking user if they want another new number of the dice which will determine if the while loop should continue or break
-    answer=input("Roll the dice?\nType 'y' if yes: ")
+    answer=input("\nRoll the dice?\nType 'y' if yes: ")
     #if user clicks y and continues then the while loop's condition stays true
     if answer=="y":
         continue
@@ -28,4 +28,4 @@ while True:
 
 #after the loop ends it will display the number of times the loop was used
 # it will show the total result after the loop is terminated
-print("The number of times the dice was rolled: ",dice_rounds)
+print("\nThe number of times the dice was rolled: ",dice_rounds)

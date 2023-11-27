@@ -150,35 +150,39 @@ def mod():
 
 while True:
     # displaying the 5 operations for calculation
-    operation_choice=float(input("\nSelect a number from the options given below:\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Modulus\nYour choice of operation: "))
-    print("\n")
+    operation_choice=input("\nSelect a number from the options given below:\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Modulus\nYour choice of operation: ")
 
     #there are 2 if statements in this loop
 
     ######### this first 'if else statement' is to check which nuumber the user typed to select an operation from the list ##################
     
-    # If the user types 1 for addition
-    if operation_choice==1:
-        add()
+    if operation_choice.isdigit():
+        user_choice = int(operation_choice)
+        # If the user types 1 for addition
+        if user_choice == 1:
+            add()
 
-    # If the user types 2 for subtraction
-    elif operation_choice==2:
-        sub()
+        # If the user types 2 for subtraction
+        elif user_choice == 2:
+            sub()
 
-    # If the user types 3 for multiplication
-    elif operation_choice==3:
-        mul()
+        # If the user types 3 for multiplication
+        elif user_choice == 3:
+            mul()
 
-    # If the user types 4 for division
-    elif operation_choice==4:
-        print("Here is your result: ",div())
+        # If the user types 4 for division
+        elif user_choice == 4:
+            print("Here is your result: ",div())
 
-    # If the user types 5 for subtraction
-    elif operation_choice==5:
-        print("Here is your remainder: ",mod())
+        # If the user types 5 for subtraction
+        elif user_choice == 5:
+            print("Here is your remainder: ",mod())
+        else:
+            print("\nWhoops! Invalid input. Please try again.")
+            continue
 
-    # Error handling: If the user types the wrong number
-    else:
+
+    else:# Error handling: If the user types the wrong number or if user types string
         print("\nWhoops! Invalid input. Please try again.")
         #continue will skip the instructions written below this if else statement and start the loop again
         continue
