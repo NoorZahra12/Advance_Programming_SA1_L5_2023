@@ -3,3 +3,9 @@
 # including circles, squares, and rectangles. The application should utilize a tabbed interface to organize the 
 # calculations for each shape. Each of the 3 functions should ask for the necessary information 
 # (e.g. lengths and/or angles and output the answer.
+
+import tkinter as tk
+from tkinter import ttk
+
+def calculate_area():
+    

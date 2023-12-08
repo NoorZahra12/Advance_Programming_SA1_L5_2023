@@ -8,10 +8,10 @@
 
 import tkinter as tk
 root=tk.Tk()
-root.geometry("200x200")
+root.geometry("300x200")
 root.title("31/oct/2023")
 
-label = tk.Label(root,text="Hello World!", font=("Arial", 16, "bold"))
+label = tk.Label(root,text="Hello World!", font=("Arial", 16, "bold"),pady=60,bg="pink")
 label.pack()
 
 root.resizable(0,0)

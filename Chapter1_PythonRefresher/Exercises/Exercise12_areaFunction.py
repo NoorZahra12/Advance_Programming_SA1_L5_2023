@@ -20,7 +20,7 @@ def area_circle():
     #asking necessary input from user
     radius=float(input("Enter radius: "))
     #formula for calculating the area and storing the answer inside a variable
-    area=math.pi*radius**2
+    area=math.pi*(radius**2)
     # returnimg the answer
     return area
 def area_triangle():

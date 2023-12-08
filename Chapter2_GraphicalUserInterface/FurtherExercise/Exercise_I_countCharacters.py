@@ -44,19 +44,21 @@ def characterCount():
         elif character.isdigit():
             # increasing number if it is a number
             number+=1
+        # at last if none of the above are true then it must be a special character like space or characters like !@#$%
         else:
             special+=1
 
         result.set("Characters: {}\nAlphabet letters: {}\nVowels: {}\nConsonants: {}\nNumbers: {}\nSpecial characters: {}".format(letter, alphabets, vowel_count, consonant, number, special))
     
 
+# asking user to enter a word
 wordLabel = tk.Label(root, text="Enter a word: ")
 wordLabel.pack(pady=10)
-
+# taking user input
 user_input = tk.StringVar()
 wordEntry = tk.Entry(root, textvariable=user_input)
 wordEntry.pack()
-
+# submit button which will call the character count function to run when the user will click
 submitButton = tk.Button(root, text='Submit', command=characterCount)
 submitButton.pack(pady=15)
 

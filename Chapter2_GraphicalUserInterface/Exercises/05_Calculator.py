@@ -64,7 +64,7 @@ num2Entry.grid(row=1, column=4, columnspan=3, padx=10, pady=10)
 buttons = ["+", "-", "x", "/", "Remainder"]
 # this will display 5 buttons using for loop and it will do the necessary calculation according to which ever button user clicks
 for i, operation in enumerate(buttons):
-    tk.Button(root, text=operation, command=lambda selectop=operation: calculate(selectop)).grid(row=3, column=i, padx=5, pady=5)
+    tk.Button(root, text=operation, command=lambda selectop=operation: calculate(selectop)).grid(row=3, column=i, padx=10, pady=5)
 
 
 
@@ -73,7 +73,7 @@ result = tk.StringVar()
 # Result label where the answer will be displayed or a message(about invalid input or can't divide by 0)
 # here i am linking the widget with the result variable which holds the tk.StringVar()
 result_label = tk.Label(root, textvariable=result)
-result_label.grid(row=3, column=0, columnspan=7, pady=10)
+result_label.grid(row=4, column=0, columnspan=7, pady=10)
 
 # Start the main loop
 root.mainloop()

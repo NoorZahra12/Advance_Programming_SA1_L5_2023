@@ -24,6 +24,4 @@ user_newAge=user_age + 1
 username_length=len(user_name)
 
 #after taking all the input i will display the message starting in new line
-print("\nIt is good to meet you,", user_name.title(),
-      "\nThe length od your name is:\n",username_length,
-      "\nYou will be",user_newAge,"in a year")
+print(f"It is good to meet you, {user_name.title()}\nThe length of your name is:\n{username_length}\nYou will be {user_newAge} in a year")

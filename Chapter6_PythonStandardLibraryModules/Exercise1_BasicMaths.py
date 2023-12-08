@@ -6,3 +6,7 @@
 # For a = 5 find the factorial of a
 # Find the value of 23
 # For a=16 find the square root of a
+
+import tkinter as tk
+import math
+

@@ -11,6 +11,13 @@ root = tk.Tk()
 root.title("12/nov/2023")
 root.configure(bg="white")
 
+
+# making a function to reset all the changes
+def resetbtn():
+    submit_button["text"] = "Submit"
+    submit_button["bg"] = "#22363D"
+
+
 # making a function for the submit button
 def submit():
     # getting all the input written by user and putting it inside a variable
@@ -25,13 +32,15 @@ def submit():
     if not all((stdname, stdmobnum, stdemail, stdhome, stdgender, stdcourse)):
         # in case the user leaves a these specific fields empty, the text will show incomplete
         submit_button["text"] = "Incomplete"
-        # here after 3000 ms(milisecond) or 3 seconds the text will change to Submit
-        root.after(3000, lambda: submit_button.config(text="Submit"))
+        submit_button["bg"] = "red"
+        # here after 3000 ms(milisecond) or 3 seconds the button will reset to it's original button
+        root.after(3000, lambda: resetbtn())
     else:
         # if user types everthing correctly  it will change the text t submitted
         submit_button["text"] = "Submitted"
-        # here after 3000 ms(milisecond) or 3 seconds the text will change to Submit
-        root.after(3000, lambda: submit_button.config(text="Submit"))
+        submit_button["bg"] = "green"
+        # here after 3000 ms(milisecond) or 3 seconds the button will reset to it's original button
+        root.after(3000, lambda: resetbtn())
 
 # making a function for the clear button
 def clear():

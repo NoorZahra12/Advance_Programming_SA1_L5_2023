@@ -16,3 +16,4 @@ for row in range(1,num+1):
         #printing the columns in each row with a space only
         print(column,end=' ')
     print()
+    
