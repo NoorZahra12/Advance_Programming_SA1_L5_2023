@@ -29,21 +29,19 @@ def checker():
 
 welcome = tk.Label(root, text="Welcome Back!", font=("Helvetica", 14)).pack()
 
-# Create a frame
+# Creating a frame which will be the Container
 box = tk.Frame(root, pady=20)
 box.pack()
 
 # Username
 usernamelabel = tk.Label(box, text="Enter username:")
 usernamelabel.grid(row=1,column=0)
-
 username = tk.Entry(box)
 username.grid(row=1,column=2)
 
 # Password
 passwordlabel = tk.Label(box, text="Enter password:")
 passwordlabel.grid(row=2,column=0)
-
 user_password = tk.Entry(box, show="*")
 user_password.grid(row=2,column=2)
 

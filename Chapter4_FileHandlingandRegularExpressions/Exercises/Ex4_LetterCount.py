@@ -9,7 +9,7 @@ def count_occurrences(sentences, target):
     return sentences.lower().count(target.lower())
 
 
-# counting the occurraneces of the target character
+# function to count the user's target string
 def count_letter():
     # getting user entry
     target = letter_entry.get()
@@ -35,13 +35,13 @@ with open(file_path, 'r') as file:
 # Create and pack widgets
 userlabel = tk.Label(root, text="Enter a letter:", bg="#aeafff", font=("Arial",10,"bold"))
 userlabel.pack(pady=10)
-
+# User Entry
 letter_entry = tk.Entry(root, width=5)
 letter_entry.pack(pady=10)
-
+# calling function button
 count_button = tk.Button(root, text="count occurrences", command=count_letter, bg="#565888", fg="white",padx=5,pady=2)
 count_button.pack(pady=10)
-
+# answer
 result_label = tk.Label(root, text="", bg="#aeafff")
 result_label.pack(pady=10)
 

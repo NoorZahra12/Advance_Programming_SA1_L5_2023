@@ -133,10 +133,10 @@ def clear_inputs():
     # removing the result label from the display
     result_label.pack_forget()
 
-
+# making a small frame
 rootframe = tk.Frame(root, pady=20, padx=20)
 rootframe.pack(pady=40)
-
+# select a shape text
 labeltext = tk.Label(rootframe, text="Let's calculate the area of a shape.\nSelect a shape:", fg="purple", font=("Helvetica", 12, "bold"))
 labeltext.pack(pady=20)
 
@@ -144,13 +144,15 @@ shape_frame = ttk.Frame(rootframe, style="TFrame")
 shape_frame.pack()
 
 shapelist = ["circle", "square", "rectangle", "triangle"]
+# creating buttins with for loop
 for index, shapeform in enumerate(shapelist):
+    # enumerate makes a list of tuples with for index and element. it turns a normal list into a list of tuples [(0,i),(1,i),(2,i)]
     shape_button = tk.Button(shape_frame, text=shapeform, command=lambda s=shapeform: take_entry(s))
     shape_button.grid(row=1, column=index, padx=5, pady=5)
 
 ansFrame = tk.Frame(rootframe)
 ansFrame.pack()
-
+# not packed until user selects shape
 entrya = tk.Entry(ansFrame)
 entryb = tk.Entry(ansFrame)
 

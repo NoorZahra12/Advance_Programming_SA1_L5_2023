@@ -11,6 +11,7 @@
 # Frank	Salesman	2500.0	4
 # Marker	Clerk		1500.0	5
 # import the tkinter module and alias it as tk
+
 import tkinter as tk
 
 # create a class to represent an Employee
@@ -81,14 +82,14 @@ class EmployeeApp:
         # configure column and row weights for both frames
         self.configure_frame_weights()
 
-    # method to add an employee
+    # making funtion to add an employee
     def add_employee(self):
         # retrieve input values from entry widgets
         name = self.name_entry.get()
         position = self.position_entry.get()
         salary_str = self.salary_entry.get()
 
-        # validate input values
+        # Error Hangling the user Input
         if not (name and position and salary_str):
             warning = tk.Label(root, text="Input Error: Please enter all details.")
             warning.grid()
@@ -125,22 +126,26 @@ class EmployeeApp:
         # display employee information in the right frame
         self.display_employee(employee)
 
-    # method to reset the button text and color
+    # making function to reset the button text and color
     def reset_button(self):
         self.add_button.config(text="Add Employee", bg="SystemButtonFace")
 
-    # method to display employee information in the right frame
+    # making function to display employee information in the right frame
     def display_employee(self, employee):
         # create and display labels for each attribute
+        # name
         name_label = tk.Label(self.name_frame, text=employee.name)
         name_label.pack()
 
+        # position
         position_label = tk.Label(self.position_frame, text=employee.position)
         position_label.pack()
 
+        # salary
         salary_label = tk.Label(self.salary_frame, text=str(employee.salary))
         salary_label.pack()
 
+        # id
         id_label = tk.Label(self.id_frame, text=str(employee.id))
         id_label.pack()
 
@@ -150,7 +155,7 @@ class EmployeeApp:
         self.salary_labels.append(salary_label)
         self.id_labels.append(id_label)
 
-    # method to configure column and row weights for both frames
+    # function for adjusting the row and columns in both frames
     def configure_frame_weights(self):
         self.root.columnconfigure(0, weight=1)
         self.root.columnconfigure(1, weight=1)
@@ -162,7 +167,7 @@ class EmployeeApp:
         self.right_frame.columnconfigure(2, weight=1)
         self.right_frame.columnconfigure(3, weight=1)
 
-    # method to create widgets for the right frame
+    # making function to create widgets in the right frame
     def create_right_frame_widgets(self):
         self.name_frame = tk.Frame(self.right_frame)
         self.name_frame.grid(row=0, column=0, pady=5)
@@ -180,9 +185,8 @@ class EmployeeApp:
         self.id_frame.grid(row=0, column=3, pady=5)
         tk.Label(self.id_frame, text="ID").pack()
 
-# create the main Tkinter window and the EmployeeApp instance
-root = tk.Tk()
-app = EmployeeApp(root)
 
-# start the Tkinter event loop
+root = tk.Tk()
+# putting the app inside the root
+app = EmployeeApp(root)
 root.mainloop()

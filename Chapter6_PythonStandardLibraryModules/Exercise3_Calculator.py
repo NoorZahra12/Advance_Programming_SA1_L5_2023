@@ -22,6 +22,7 @@ def add():
     print("The sum is: ", ans)
 
     while True:
+        # this while loop is for letting user add as many values as they want
         addv = input("Do you want to add value?\ntype q to quit:")
         if addv.lower() == "q":
             break
@@ -37,6 +38,7 @@ def subtract():
     print("The difference is: ", ans)
 
     while True:
+        # this while loop is for letting user add as many values as they want
         addv = input("Do you want to subtract value?\ntype q to quit:")
         if addv.lower() == "q":
             break
@@ -53,6 +55,7 @@ def mul():
     print("The product is: ", ans)
 
     while True:
+        # this while loop is for letting user add as many values as they want
         addv = input("Do you want to multiply value?\ntype q to quit:")
         if addv.lower() == "q":
             break

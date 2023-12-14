@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 import os
 
 def calculate_total_price(coffee_type, sugar_level, milk_level, cup_size):
+    # setting prices and getting what user picked
     coffee_price_dict = {"Black Coffee": 2.50, "Latte": 3.00, "Espresso": 2.00}
     base_price = coffee_price_dict.get(coffee_type, 0)
     sugar_price_dict = {"None": 0, "Less": -0.25, "Standard": 0, "Extra": 0.25}
@@ -18,6 +19,7 @@ def calculate_total_price(coffee_type, sugar_level, milk_level, cup_size):
     return base_price + sugar_price + milk_price + cup_size_price
 
 def make_receipt():
+    # getting user data
     coffee_type = coffee_var.get()
     sugar_level = sugar_var.get()
     milk_level = milk_var.get()
@@ -47,6 +49,7 @@ root = tk.Tk()
 root.geometry("900x400")
 root.title("Coffee Vending Machine")
 
+# colors
 dark_brown = "#2E1A0D"
 light_brown = "#D2B48C"
 cream = "#FFF5E1"
@@ -60,10 +63,10 @@ input_frame = tk.Frame(root, bg=light_brown, pady=10, border=1, relief="solid", 
 input_frame.pack(side="left", expand=1, fill="both", padx=10, pady=10)
 
 
-
+# welcome text
 label_title = tk.Label(input_frame, text="Welcome to the Coffee Vending Machine!", fg=dark_red, font=("Helvetica", 14, "bold"), bg=light_brown)
 label_title.pack(pady=10)
-
+# type
 label_coffee_type = tk.Label(input_frame, text="Coffee Type:", bg=light_brown)
 label_coffee_type.pack()
 # dropdown for user to pick

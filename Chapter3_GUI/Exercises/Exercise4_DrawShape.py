@@ -42,7 +42,7 @@ def get_coordinates():
     coordinates_text = coordinates_entry.get()
     if not coordinates_text:
         return
-
+    # turning user input into integer and using a for loop in one line
     coordinates = [int(coord) for coord in coordinates_text.split()]
 
     draw_shape(shape, coordinates)

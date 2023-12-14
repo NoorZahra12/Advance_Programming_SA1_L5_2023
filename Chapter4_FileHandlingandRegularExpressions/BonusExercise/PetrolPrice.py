@@ -1,3 +1,4 @@
+# importing library
 import tkinter as tk
 import os
 
@@ -38,7 +39,7 @@ def calculate_statistics():
     under3_5l.config(text=f"Petrol bought at under 3.5 AED per liter: {under_3_5_liters} liters")
 
 
-# Create the main Tkinter window
+# creating the main Tkinter window
 root = tk.Tk()
 root.title("Petrol Price Calculator")
 root.geometry("300x200")
@@ -47,7 +48,7 @@ root.config(bg="skyblue")
 # 3 result labels
 per_l = tk.Label(root, text="Cost per liter: ",pady=10, bg="skyblue", fg="darkblue")
 per_l.pack()
-
+# calculating avg
 average = tk.Label(root, text="Average price per liter: ", bg="skyblue", fg="darkblue")
 average.pack()
 
@@ -57,6 +58,5 @@ under3_5l.pack()
 # button
 calculate_button = tk.Button(root, text="Calculate Statistics", command=calculate_statistics, bg="blue", fg="white")
 calculate_button.pack(pady=10)
-
 
 root.mainloop()
