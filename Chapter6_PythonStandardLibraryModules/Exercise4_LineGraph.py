@@ -23,6 +23,8 @@ plt.plot(x_dot, y_dot, '--', label='Dotted Line')
 plt.xlabel('X-axis Label')
 plt.ylabel('Y-axis Label')
 plt.title('Line and Dotted Line')
+# displaying the labels with legend
+plt.legend()
 
 # Display the plot
 plt.show()
