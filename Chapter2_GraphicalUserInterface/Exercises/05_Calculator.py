@@ -12,7 +12,6 @@ root.title("13/nov/2023 Calculator")
 # basically there's gonna be 2 entry widgets for the user to type in
 # then 5 options
 # if user types evething correctly it will display the answer otherwise it will say that input is invalid
-
 def calculate(op_selection):
     num1_val = num1Entry.get()
     num2_val = num2Entry.get()
@@ -64,7 +63,7 @@ num2Entry.grid(row=1, column=4, columnspan=3, padx=10, pady=10)
 buttons = ["+", "-", "x", "/", "Remainder"]
 # this will display 5 buttons using for loop and it will do the necessary calculation according to which ever button user clicks
 for i, operation in enumerate(buttons):
-    tk.Button(root, text=operation, command=lambda selectop=operation: calculate(selectop)).grid(row=3, column=i, padx=10, pady=5)
+    tk.Button(root, text=operation,background="skyblue" ,command=lambda selectop=operation: calculate(selectop)).grid(row=3, column=i, padx=10, pady=5)
 
 
 

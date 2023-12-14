@@ -8,7 +8,7 @@ import tkinter as tk
 from datetime import datetime
 
 root = tk.Tk()
-root.title("27/nov/2023 Age Calculator")
+root.title("Age Calculator")
 root.geometry("350x200")
 
 def calculate_age():

@@ -13,7 +13,8 @@ for row in range(1,num+1):
     #this nested loop is for the columns inside the row
     #the columns will increase by 1 in each row
     for column in range(1,row+1):
-        #printing the columns in each row with a space only
+        #print i want the columns to display in the same row so im changing the print's default ending with a space instead of \n
         print(column,end=' ')
+    # printing empty rows because print by default ends with \n
+    # so i dont need to type print("\n") to display a new row n leave it empty
     print()
-    

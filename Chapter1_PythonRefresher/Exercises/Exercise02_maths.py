@@ -26,7 +26,7 @@ if user_choice == "+" or user_choice ==  "-" or user_choice ==  "x" or user_choi
     elif user_choice=="-": #if user wrote subtract it will subtract the 2 numbers to display the subtraction
         print("Subtraction: ",subtract)
     elif user_choice=="x": #if user wrote subtract it will subtract the 2 numbers to display the subtraction
-        print("Multiplication: ",subtract)
+        print("Multiplication: ",prod)
     elif user_choice=="/": #if user wrote divide then it will divide the first number with second and give the answer
         print("Divide: ",divide)
     elif user_choice=="%": #if user wrote remainder it will display the remainder of the 2 input

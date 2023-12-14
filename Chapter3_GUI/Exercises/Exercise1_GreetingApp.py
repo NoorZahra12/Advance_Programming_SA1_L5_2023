@@ -21,9 +21,9 @@ def updatebtn():
     selected_color = colorvar.get()
     # Updating the greeting text
     result.set(f"Hello {entry_username.get()}!\nYour favorite color is {selected_color}.")
-    # Updating the text color in the display frame
+    # Updating the text color in the display frame according to what the user picks
     resultlabel.config(fg=selected_color)
-    # Updating the border color in the display frame
+    # Updating the border color in the display frame according to what the user picks
     displayframe.config(highlightbackground=selected_color, highlightcolor=selected_color)
 
 
@@ -40,7 +40,7 @@ label_title.pack(pady=10)
 askinglabel = tk.Label(inputframe, text="What is your good name?", bg="#aef")
 askinglabel.pack()
 
-entry_username = tk.Entry(inputframe, bg="#fff")  # Set entry background color
+entry_username = tk.Entry(inputframe, bg="#fff") 
 entry_username.pack(pady=10)
 
 menuframe = tk.Frame(inputframe, bg="#aef")
