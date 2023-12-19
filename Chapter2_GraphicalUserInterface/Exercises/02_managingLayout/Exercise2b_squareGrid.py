@@ -18,13 +18,13 @@ frame2 = tk.Frame(root, relief="groove", border=5)
 # creating two labels inside frame 1
 labelA = tk.Label(frame1, text="A", padx=70, pady=40, bg="#22263D", fg="white")
 labelB = tk.Label(frame1, text="B", padx=70, pady=40)
+
 # creating two labels inside frame 2
 labelC = tk.Label(frame2, text="C", padx=70, pady=40)
 labelD = tk.Label(frame2, text="D", padx=70, pady=40, bg="#22263D", fg="white")
 
 labelA.pack(side="top", expand=True, fill=tk.BOTH)
 labelB.pack(side="bottom", expand=True, fill=tk.BOTH)
-
 labelC.pack(side="top", expand=True, fill=tk.BOTH)
 labelD.pack(side="bottom", expand=True, fill=tk.BOTH)
 

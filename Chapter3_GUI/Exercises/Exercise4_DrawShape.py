@@ -56,31 +56,29 @@ root = tk.Tk()
 root.title("4/dec/2023 Draw Shape")
 root.config(bg="#abcdef")
 
+# shapes list which the user will select from combo box and write it's coords. 6 numbers for triangle otherwise 4 for others
 shapes = ["oval", "rectangle", "square", "triangle"]
 shape_var = tk.StringVar()
 shape_var.trace_add("write", update_coordinates_label)
-
 shape_label = tk.Label(root, text="Select Shape:", bg="#abcdef")
 shape_label.pack(pady=10)
-
 shape_combobox = Combobox(root, textvariable=shape_var, values=shapes)
 shape_combobox.pack()
 
-# making a canvas
+# making a canvas where the shapes will be drawn
 canvas = tk.Canvas(root, width=300, height=200, bg="green")
 canvas.pack(pady=10)
 
-# Coordinates entry
+# Coordinates of any shape
 coordinates_label = tk.Label(root, text="Enter Coordinates:", bg="#abcdef")
 coordinates_label.pack()
-
 coordinates_entry = tk.Entry(root)
 coordinates_entry.pack(pady=10)
 
-# Buttons
+# this button will draw the shape according to the coords written by user
 draw_button = tk.Button(root, text="Draw Shape", command=get_coordinates)
 draw_button.pack(pady=10)
-
+# this button will clean the black board
 clear_button = tk.Button(root, text="Clear Canvas", command=clear_canvas)
 clear_button.pack()
 

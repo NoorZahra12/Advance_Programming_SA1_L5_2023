@@ -71,7 +71,7 @@ for index, labeltext in enumerate(["Name:", "Mark 1:", "Mark 2:", "Mark 3:"]):
         entry_mark3.grid(row=index, column=1, pady=5)
 
 # avg btn
-calc_avg_btn = tk.Button(root, text="Calculate Average", command=calc_average)
+calc_avg_btn = tk.Button(root, text="Calculate Average", command=calc_average, bg="#223d66", fg="white")
 calc_avg_btn.grid(row=4, column=0, columnspan=2, pady=10)
 
 # Result label to display student information

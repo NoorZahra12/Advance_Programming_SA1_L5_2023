@@ -46,12 +46,12 @@ def calc_change():
         changelabel.config(text="")
 
 root = tk.Tk()
-root.geometry("900x400")
+root.geometry("800x400")
 root.title("Coffee Vending Machine")
 
 # colors
 dark_brown = "#2E1A0D"
-light_brown = "#D2B48C"
+light_brown = "#FFE6D5"
 cream = "#FFF5E1"
 dark_red = "#4F1B10"
 
@@ -65,46 +65,48 @@ input_frame.pack(side="left", expand=1, fill="both", padx=10, pady=10)
 
 # welcome text
 label_title = tk.Label(input_frame, text="Welcome to the Coffee Vending Machine!", fg=dark_red, font=("Helvetica", 14, "bold"), bg=light_brown)
-label_title.pack(pady=10)
+label_title.grid(row=0,column=0,columnspan=2,padx=20,pady=20)
+
 # type
 label_coffee_type = tk.Label(input_frame, text="Coffee Type:", bg=light_brown)
-label_coffee_type.pack()
+label_coffee_type.grid(row=1,column=0)
 # dropdown for user to pick
 coffee_options = ["Black Coffee", "Latte", "Espresso"]
 coffee_var = tk.StringVar()
 coffee_menu = ttk.Combobox(input_frame, textvariable=coffee_var, values=coffee_options, style="TCombobox")
-coffee_menu.pack(pady=5)
+coffee_menu.grid(row=1,column=1,pady=5)
 coffee_var.set("Black Coffee")
+
 # SUGAR
 label_sugar = tk.Label(input_frame, text="Sugar:", bg=light_brown)
-label_sugar.pack()
+label_sugar.grid(row=2,column=0)
 sugar_options = ["None", "Less", "Standard", "Extra"]
 sugar_var = tk.StringVar()
 sugar_menu = ttk.Combobox(input_frame, textvariable=sugar_var, values=sugar_options, style="TCombobox")
-sugar_menu.pack(pady=5)
+sugar_menu.grid(row=2,column=1,pady=5)
 sugar_var.set("Standard")
 
 # MILK
 label_milk = tk.Label(input_frame, text="Milk:", bg=light_brown)
-label_milk.pack()
+label_milk.grid(row=3,column=0)
 milk_options = ["None", "Less", "Standard", "Extra"]
 milk_var = tk.StringVar()
 milk_menu = ttk.Combobox(input_frame, textvariable=milk_var, values=milk_options, style="TCombobox")
-milk_menu.pack(pady=5)
+milk_menu.grid(row=3,column=1,pady=5)
 milk_var.set("Standard")
 
 # CUP
 label_cup_size = tk.Label(input_frame, text="Cup Size:", bg=light_brown)
-label_cup_size.pack()
+label_cup_size.grid(row=4,column=0)
 cup_size_options = ["Small", "Medium", "Large"]
 cup_size_var = tk.StringVar()
 cup_size_menu = ttk.Combobox(input_frame, textvariable=cup_size_var, values=cup_size_options, style="TCombobox")
-cup_size_menu.pack(pady=5)
+cup_size_menu.grid(row=4,column=1,pady=5)
 cup_size_var.set("Medium")
 
 # Receipt making button which will show the receipt
-make_receipt_button = tk.Button(input_frame, text="Make Receipt", command=make_receipt)
-make_receipt_button.pack(pady=10)
+make_receipt_button = tk.Button(input_frame, text="Make Receipt", command=make_receipt, bg="brown",fg="white")
+make_receipt_button.grid(row=5,column=0,columnspan=2,pady=20)
 
 
 # Display Frame
@@ -123,7 +125,7 @@ background_label.place(relwidth=1, relheight=1)
 
 
 # Receipt Frame
-receipt_frame = tk.Frame(display_frame, bg=dark_red, pady=20, padx=20)
+receipt_frame = tk.Frame(display_frame, bg=dark_red, pady=30, padx=20)
 
 # user's order label
 order_label = tk.Label(receipt_frame, text="", wraplength=300, justify='left', fg=cream, bg=dark_red)
@@ -148,7 +150,7 @@ changelabel = tk.Label(receipt_frame, text="", fg=cream, bg=dark_red)
 changelabel.pack()
 
 # buy button which will give the change if there is any using the function to calculate
-buy_button = tk.Button(receipt_frame, text="Buy", command=calc_change)
+buy_button = tk.Button(receipt_frame, text="Buy", command=calc_change, bg=light_brown, padx=10)
 buy_button.pack(pady=10)
 
 receipt_frame.pack()

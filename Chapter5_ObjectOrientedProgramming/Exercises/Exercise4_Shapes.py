@@ -91,7 +91,7 @@ root.geometry("800x450")
 # Load and resize the background image
 script_directory = os.path.dirname(os.path.realpath(__file__))
 img = Image.open(os.path.join(script_directory, "shapesbg.jpg"))
-img = img.resize((800, 400), Image.BICUBIC)
+img = img.resize((800, 450), Image.BICUBIC)
 tk_img = ImageTk.PhotoImage(img)
 
 # Creating a label which contains the image and placing it as a background
