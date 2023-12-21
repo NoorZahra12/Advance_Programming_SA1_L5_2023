@@ -22,6 +22,7 @@ class Dog:
         current_year = 2023  # Set the current year manually or use another method to get the current year
         return current_year - self.Birthyear
 
+    @classmethod
     def woof_oldest(cls):
         if cls.oldest_dog:
             return f"{cls.oldest_dog.name} (Breed: {cls.oldest_dog.breed}) says: Woof!"
